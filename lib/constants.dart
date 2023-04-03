@@ -13,9 +13,9 @@ part of observe_internet_connectivity;
 ///
 ///
 const kDefaultInternetAddresses = [
-  InternetAddress(
+  InternetDomainAddress(
       host: _googleHost, port: _defaultPort, timeOut: _defaultTimeOut),
-  InternetAddress(
+  InternetDomainAddress(
       host: _cloudFlareHost, port: _defaultPort, timeOut: _defaultTimeOut),
 ];
 

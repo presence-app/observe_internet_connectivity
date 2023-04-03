@@ -1,14 +1,14 @@
 part of observe_internet_connectivity;
 
-class InternetAddress {
+class InternetDomainAddress {
   final String host;
   final int port;
   final Duration timeOut;
-  const InternetAddress(
+  const InternetDomainAddress(
       {required this.host, required this.port, required this.timeOut});
 
-  InternetAddress copyWith({String? host, int? port, Duration? timeOut}) =>
-      InternetAddress(
+  InternetDomainAddress copyWith({String? host, int? port, Duration? timeOut}) =>
+      InternetDomainAddress(
           host: host ?? this.host,
           port: port ?? this.port,
           timeOut: timeOut ?? this.timeOut);

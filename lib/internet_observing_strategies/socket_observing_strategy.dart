@@ -30,7 +30,7 @@ abstract class SocketObservingStrategy extends InternetObservingStrategy {
   /// These should be globally available destinations.
   ///
   /// Default is [kDefaultInternetAddresses].
-  List<InternetAddress> internetAddresses;
+  List<InternetDomainAddress> internetAddresses;
 
   SocketObservingStrategy(
       {this.initialDuration,
@@ -56,7 +56,7 @@ abstract class SocketObservingStrategy extends InternetObservingStrategy {
     return stream.any((element) => element);
   }
 
-  Future<bool> _hasInternet(InternetAddress internetAddress) async {
+  Future<bool> _hasInternet(InternetDomainAddress internetAddress) async {
     Socket? sock;
     try {
       sock = await Socket.connect(
